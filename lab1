@@ -13,11 +13,7 @@ void number1()
     cout << "\nEnter quantity in gallons: ";
     cin >> gallons;    cufeet = gallons / 7.481;
     cout << "Equivalent in cublic feet is " << cufeet << endl;
-    cout << "\nНажмите на клавиуатуре стрелочку вверх чтобы перейти к следующему заданию. \nЧтобы вернуться к выбору задания нажмите любую другую кнопку";
-    int key = _getch();
-    if (key == 224) oleg = 2;
-    else oleg = -401238478;
-    key = _getch();
+    
 
 
 }
@@ -30,11 +26,7 @@ void number2()
 
         << 1993 << setw(8) << 16200 << endl;
 
-    cout << "\nНажмите на клавиуатуре стрелочку вверх чтобы перейти к следующему заданию. \nЧтобы вернуться к выбору задания нажмите любую другую";
-    int key = _getch();
-    if (key == 224) oleg = 3;
-    else oleg = -401238478;
-    key = _getch();
+   
 }
 
 void number3()
@@ -49,11 +41,6 @@ void number3()
     cout << var-- << endl;    // displays var, then decrements it    
     cout << var << endl;      // var is 19
 
-    cout << "\nНажмите на клавиуатуре стрелочку вверх чтобы перейти к следующему заданию. \nЧтобы вернуться к выбору задания нажмите любую другую кнопку";
-    int key = _getch();
-    if (key == 224) oleg = 4;
-    else oleg = -401238478;
-    key = _getch();
 }
 
 void number4()
@@ -61,25 +48,14 @@ void number4()
 
     cout << "Шаганэ ты моя, Шаганэ! \nПотому, что я с севера, что ли, \nЯ готов рассказать тебе поле, \nПро волнистую рожь при луне. \nШаганэ ты моя, Шаганэ. \n\nПотому, что я с севера, что ли, \nЧто луна там огромней в сто раз, \nКак бы ни был красив Шираз, \nОн не лучше рязанских раздолий. \n\nПотому, что я с севера, что ли. \nЯ готов рассказать тебе поле, \nЭти волосы взял я у ржи, \nЕсли хочешь, на палец вяжи — \nЯ нисколько не чувствую боли. \nЯ готов рассказать тебе поле. \n\nПро волнистую рожь при луне \nПо кудрям ты моим догадайся. \nДорогая, шути, улыбайся, \nНе буди только память во мне \nПро волнистую рожь при луне. \n\nШаганэ ты моя, Шаганэ! \nТам, на севере, девушка тоже, \nНа тебя она страшно похожа, \nМожет, думает обо мне… \nШаганэ ты моя, Шаганэ.";
 
-    cout << "\n\nНажмите на клавиуатуре стрелочку вверх чтобы перейти к следующему заданию. \nЧтобы вернуться к выбору задания нажмите любую другую кнопку";
-    int key = _getch();
-    if (key == 224) oleg = 5;
-    else oleg = -401238478;
-    key = _getch();
-}
 
+}
 void number5()
 {
     char x;
     cout << "Введите букву Английского языка. Если введённая буква будет строчной, то \nпрограмма выведет ненулевое значение. Если заглавной - нулевое.\n\n";
     cin >> x;
     cout << islower(x);
-
-    cout << "\n\nНажмите на клавиуатуре стрелочку вверх чтобы перейти к следующему заданию. \nЧтобы вернуться к выбору задания нажмите любую другую кнопку";
-    int key = _getch();
-    if (key == 224) oleg = 6;
-    else oleg = -401238478;
-    key = _getch();
 }
 
 void number6()
@@ -90,12 +66,6 @@ void number6()
     cin >> dollars_value;
     cout << "Другие валюты:" << endl << "Фунты стерлингов: " << dollars_value / 1.487 << endl << "Франки: " << dollars_value / 0.172 << endl << "Немецкие марки: " << dollars_value / 0.584 << endl << "Японские йены: " << dollars_value / 0.00955;
 
-
-    cout << "\n\nНажмите на клавиуатуре стрелочку вверх чтобы перейти к следующему заданию. \nЧтобы вернуться к выбору задания нажмите любую другую кнопку";
-    int key = _getch();
-    if (key == 224) oleg = 7;
-    else oleg = -401238478;
-    key = _getch();
 }
 
 void number7()
@@ -106,13 +76,6 @@ void number7()
     cin >> c;
 
     cout << "Градусы по Фаренгейту: " << c * (9. / 5.) + 32;
-
-
-    cout << "\n\nНажмите на клавиуатуре стрелочку вверх чтобы перейти к следующему заданию. \nЧтобы вернуться к выбору задания нажмите любую другую кнопку";
-    int key = _getch();
-    if (key == 224) oleg = 8;
-    else oleg = -401238478;
-    key = _getch();
 }
 
 void number8()
@@ -124,11 +87,6 @@ void number8()
 
         << 1993 << setw(8) << 16200 << endl;
 
-    cout << "\n\nНажмите на клавиуатуре стрелочку вверх чтобы перейти к следующему заданию. \nЧтобы вернуться к выбору задания нажмите любую другую кнопку";
-    int key = _getch();
-    if (key == 224) oleg = 9;
-    else oleg = -401238478;
-    key = _getch();
 }
 
 void number9()
@@ -157,13 +115,6 @@ void number9()
         else b = b - a;
     }
     if (a > 1) cout << "\nМожно скоратить до: " << finale_chisl / a << '/' << finale_znam / a;
-
-
-    cout << "\n\nНажмите на клавиуатуре стрелочку вверх чтобы перейти к следующему заданию. \nЧтобы вернуться к выбору задания нажмите любую другую кнопку";
-    key = _getch();
-    if (key == 224) oleg = 10;
-    else oleg = -401238478;
-    key = _getch();
 }
 
 void number10()
@@ -180,34 +131,14 @@ void number10()
     funt = old_funt + old_shill / 20. + old_pens / 240.;
     char znak = 156;
     cout << "\nСумма в новой Британской денежной системе: " << funt;             /*НАДО ДОДЕЛАТЬ!!!!*/
-
-
-
-
-
-
-    int key;
-    cout << "\n\nНажмите на клавиуатуре стрелочку вверх чтобы перейти к следующему заданию. \nЧтобы вернуться к выбору задания нажмите любую другую кнопку";
-    key = _getch();
-    if (key == 224) oleg = 11;
-    else oleg = -401238478;
-    key = _getch();
 }
 
 void number11()
 {
-    cout << setfill(' ')<<setiosflags(ios::left) << setw(15) << "Фамилия" << setw(15) << "Имя" << setw(15) << "Адрес" << "Город" << endl;
+    cout << setfill(' ') << setiosflags(ios::left) << setw(15) << "Фамилия" << setw(15) << "Имя" << setw(15) << "Адрес" << "Город" << endl;
     cout << setiosflags(ios::left) << setw(15) << "Петров" << setw(15) << "Василий" << setw(15) << "Кленовая 16" << "Санкт-Петербург" << endl;
     cout << setiosflags(ios::left) << setw(15) << "Иванов" << setw(15) << "Сергей" << setw(15) << "Осиновая 3" << "Находка" << endl;
     cout << setiosflags(ios::left) << setw(15) << "Сидоров" << setw(15) << "Иван" << setw(15) << "Березовая 21" << "Калининград" << endl;
-
-
-    int key;
-    cout << "\n\nНажмите на клавиуатуре стрелочку вверх чтобы перейти к следующему заданию. \nЧтобы вернуться к выбору задания нажмите любую другую кнопку";
-    key = _getch();
-    if (key == 224) oleg = 12;
-    else oleg = -401238478;
-    key = _getch();
 }
 
 void number12()
@@ -222,13 +153,6 @@ void number12()
     old_pens = (old_shill - int_old_shill) * 12.;
     cout << "В старой Британской денежной системе: ";
     cout << int_funt << '.' << int_old_shill << '.' << (int)old_pens;
-
-
-    int key;
-    cout << "\n\nЧтобы вернуться к выбору задания нажмите любую другую кнопку";
-    key = _getch();
-    oleg = -401238478;
-    key = _getch();
 }
 
 
@@ -236,62 +160,69 @@ void number12()
 int main()
 {
     setlocale(LC_ALL, "rus");
-    int x, work = 12;
-    for (int i = 0;1;i)
-    {
-        if (oleg == -401238478) {
-            system("cls");
-            cout << "Лабораторная работа №1" << endl << endl;
-            cout << "Введите номер задания: ";
-            cin >> x;
-        }
-        else x = oleg;
-        if ((x > work) or (x < 1)) {
-            cout << "Задания с таким номером не существует :( \nДля продолжения нажмите любую кнопку" << endl;
-            int key = _getch();
-            oleg = -401238478;
+    int x, number_max = 12, number_work = 1;
+    for (int i = 0;1;i) {
+        system("cls");
+        cout << "Лабораторная работа №1" << endl;
+        cout << "Введите номер задания: ";
+        cin >> x;
+        cout << "Задание " << x << endl<<endl;
+        if ((x > number_max) or (x < 1)) {
+            cout << "Задания с таким номером не существует\nДля продолжения нажмите любую кнопку";
+            int nothing = _getch();
         }
         else {
-            system("cls");
-            cout << "Лабораторная работа №1" << endl << endl;
-            cout << "Задание №" << x << endl << endl;
-            switch (x) {
-            case 1:
-                number1();
-                break;
-            case 2:
-                number2();
-                break;
-            case 3:
-                number3();
-                break;
-            case 4:
-                number4();
-                break;
-            case 5:
-                number5();
-                break;
-            case 6:
-                number6();
-                break;
-            case 7:
-                number7();
-                break;
-            case 8:
-                number8();
-                break;
-            case 9:
-                number9();
-                break;
-            case 10:
-                number10();
-                break;
-            case 11:
-                number11();
-                break;
-            case 12:
-                number12();
-                break;
+            for (int j = 0;1;j) {
+                system("cls");
+                cout << "Лабораторная работа №1" << endl;
+                cout << "Задание " << x << endl << endl;
+                switch (x) {
+                case 1:
+                    number1();
+                    break;
+                case 2:
+                    number2();
+                    break;
+                case 3:
+                    number3();
+                    break;
+                case 4:
+                    number4();
+                    break;
+                case 5:
+                    number5();
+                    break;
+                case 6:
+                    number6();
+                    break;
+                case 7:
+                    number7();
+                    break;
+                case 8:
+                    number8();
+                    break;
+                case 9:
+                    number9();
+                    break;
+                case 10:
+                    number10();
+                    break;
+                case 11:
+                    number11();
+                    break;
+                case 12:
+                    number12();
+                    break;
+
+
+                }
+                cout << "\n\nДля того чтобы перейти к следющему номеру нажмите стрелку вверх на клавиатуре, для того \nчтобы вернуться к предыдущему - стрелку вниз, что бы запустить номер ещё раз - пробел." << endl;
+                cout << "Что бы вернуться к выбору номера нажмите любую другую кнопку.";
+                int key = _getch();
+                if (((key == 119) or (key == 230) or (key == 87) or (key == 150)) and (x < number_max)) x++;
+                else if (((key == 115) or (key == 235)) and (x > 1)) x--;
+                else if ((key == 114) or (key == 170)) x;
+                else break;
             }
         }
     }
