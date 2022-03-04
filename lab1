@@ -4,21 +4,21 @@ using namespace std;
 #include <iomanip>
 #include <ctype.h>
 
-int oleg=-401238478;
+int oleg = -401238478;
 
 void number1()
 {
 
     float gallons, cufeet;
-    cout << "\nEnter quantity in gallons: ";    
-    cin >> gallons;    cufeet = gallons / 7.481;     
-    cout << "Equivalent in cublic feet is " << cufeet <<endl;
+    cout << "\nEnter quantity in gallons: ";
+    cin >> gallons;    cufeet = gallons / 7.481;
+    cout << "Equivalent in cublic feet is " << cufeet << endl;
     cout << "\nНажмите на клавиуатуре стрелочку вверх чтобы перейти к следующему заданию. \nЧтобы вернуться к выбору задания нажмите любую другую кнопку";
     int key = _getch();
     if (key == 224) oleg = 2;
     else oleg = -401238478;
     key = _getch();
-    
+
 
 }
 void number2()
@@ -30,7 +30,7 @@ void number2()
 
         << 1993 << setw(8) << 16200 << endl;
 
-    cout << "\nНажмите на клавиуатуре стрелочку вверх чтобы перейти к следующему заданию. \nЧтобы вернуться к выбору задания нажмите любую другую кнопку";
+    cout << "\nНажмите на клавиуатуре стрелочку вверх чтобы перейти к следующему заданию. \nЧтобы вернуться к выбору задания нажмите любую другую";
     int key = _getch();
     if (key == 224) oleg = 3;
     else oleg = -401238478;
@@ -45,7 +45,7 @@ void number3()
 
 
     cout << var << endl;      // var is 10    
-    var *=2;                 // var becomes 20     
+    var *= 2;                 // var becomes 20     
     cout << var-- << endl;    // displays var, then decrements it    
     cout << var << endl;      // var is 19
 
@@ -88,8 +88,8 @@ void number6()
     cout << "Введите сумму в долларах. Пограмма выведет эквивалентные суммы в других валютах.";
     cout << endl;
     cin >> dollars_value;
-    cout << "Другие валюты:"<<endl<<"Фунты стерлингов: " << dollars_value / 1.487 << endl<<"Франки: "  << dollars_value / 0.172 << endl << "Немецкие марки: "  << dollars_value / 0.584 << endl << "Японские йены: " << dollars_value / 0.00955;
-    
+    cout << "Другие валюты:" << endl << "Фунты стерлингов: " << dollars_value / 1.487 << endl << "Франки: " << dollars_value / 0.172 << endl << "Немецкие марки: " << dollars_value / 0.584 << endl << "Японские йены: " << dollars_value / 0.00955;
+
 
     cout << "\n\nНажмите на клавиуатуре стрелочку вверх чтобы перейти к следующему заданию. \nЧтобы вернуться к выбору задания нажмите любую другую кнопку";
     int key = _getch();
@@ -105,7 +105,7 @@ void number7()
     float c;
     cin >> c;
 
-    cout <<"Градусы по Фаренгейту: "<<c * (9. / 5.) + 32;
+    cout << "Градусы по Фаренгейту: " << c * (9. / 5.) + 32;
 
 
     cout << "\n\nНажмите на клавиуатуре стрелочку вверх чтобы перейти к следующему заданию. \nЧтобы вернуться к выбору задания нажмите любую другую кнопку";
@@ -118,7 +118,7 @@ void number7()
 void number8()
 {
 
-    cout <<setfill('.')<< 1990 << setw(8) << 135 << endl << 1991 << setw(8) << 7290 << endl
+    cout << setfill('.') << 1990 << setw(8) << 135 << endl << 1991 << setw(8) << 7290 << endl
 
         << 1992 << setw(8) << 11300 << endl
 
@@ -134,40 +134,109 @@ void number8()
 void number9()
 {
     int key;
-    cout << "Программа складывает дроби находя общий знаминатель" << endl;
-    double fraction1, fraction2,summa,chisl,znam;
+    cout << "Программа складывает дроби находя общий знаминатель" << endl << endl;
+    double chisl1, znam1, chisl2, znam2, finale_znam, finale_chisl;
+    char slash;
 
     cout << "Введите первую дробь: ";
-    cin >> fraction1;
-    
+    cin >> chisl1 >> slash >> znam1;
+
     cout << "Введите вторую дробь: ";
-    cin >> fraction2;
-    cout << endl<<fraction1 << ' ' << fraction2;
-    
+    cin >> chisl2 >> slash >> znam2;
 
+    finale_chisl = (chisl1 * znam2) + (chisl2 * znam1);
+    finale_znam = znam1 * znam2;
 
+    cout << "\nСумма равна: " << finale_chisl << '/' << finale_znam;
 
-    
+    double a = finale_chisl;
+    double b = finale_znam;
 
+    while (a != b) {
+        if (a > b) a = a - b;
+        else b = b - a;
+    }
+    if (a > 1) cout << "\nМожно скоратить до: " << finale_chisl / a << '/' << finale_znam / a;
 
 
     cout << "\n\nНажмите на клавиуатуре стрелочку вверх чтобы перейти к следующему заданию. \nЧтобы вернуться к выбору задания нажмите любую другую кнопку";
     key = _getch();
-    if (key == 224) oleg = 7;
+    if (key == 224) oleg = 10;
     else oleg = -401238478;
     key = _getch();
 }
 
 void number10()
 {
+    double old_funt, old_shill, old_pens, funt;
+    cout << "Программа конвертирует сумму из старой Британской денежной системы в новую Британскую денежную систему." << endl << endl;
+    cout << "Введите количество фунтов: ";
+    cin >> old_funt;
+    cout << "Введите количество шиллингов: ";
+    cin >> old_shill;
+    cout << "Введите количество пенсов: ";
+    cin >> old_pens;
 
-    cout << "hello nigga";
+    funt = old_funt + old_shill / 20. + old_pens / 240.;
+    char znak = 156;
+    cout << "\nСумма в новой Британской денежной системе: " << funt;             /*НАДО ДОДЕЛАТЬ!!!!*/
+
+
+
+
+
+
+    int key;
+    cout << "\n\nНажмите на клавиуатуре стрелочку вверх чтобы перейти к следующему заданию. \nЧтобы вернуться к выбору задания нажмите любую другую кнопку";
+    key = _getch();
+    if (key == 224) oleg = 11;
+    else oleg = -401238478;
+    key = _getch();
 }
+
+void number11()
+{
+    cout << setfill(' ')<<setiosflags(ios::left) << setw(15) << "Фамилия" << setw(15) << "Имя" << setw(15) << "Адрес" << "Город" << endl;
+    cout << setiosflags(ios::left) << setw(15) << "Петров" << setw(15) << "Василий" << setw(15) << "Кленовая 16" << "Санкт-Петербург" << endl;
+    cout << setiosflags(ios::left) << setw(15) << "Иванов" << setw(15) << "Сергей" << setw(15) << "Осиновая 3" << "Находка" << endl;
+    cout << setiosflags(ios::left) << setw(15) << "Сидоров" << setw(15) << "Иван" << setw(15) << "Березовая 21" << "Калининград" << endl;
+
+
+    int key;
+    cout << "\n\nНажмите на клавиуатуре стрелочку вверх чтобы перейти к следующему заданию. \nЧтобы вернуться к выбору задания нажмите любую другую кнопку";
+    key = _getch();
+    if (key == 224) oleg = 12;
+    else oleg = -401238478;
+    key = _getch();
+}
+
+void number12()
+{
+    double old_funt, old_shill, old_pens, funt;
+    cout << "Программа конвертирует сумму из новой Британской денежной системы в старую Британскую денежную систему." << endl << endl;
+    cout << "Введите количество фунтов: ";
+    cin >> funt;
+    int int_funt = funt;
+    old_shill = (funt - int_funt) * 20.;
+    int int_old_shill = old_shill;
+    old_pens = (old_shill - int_old_shill) * 12.;
+    cout << "В старой Британской денежной системе: ";
+    cout << int_funt << '.' << int_old_shill << '.' << (int)old_pens;
+
+
+    int key;
+    cout << "\n\nЧтобы вернуться к выбору задания нажмите любую другую кнопку";
+    key = _getch();
+    oleg = -401238478;
+    key = _getch();
+}
+
+
 
 int main()
 {
-    setlocale(LC_CTYPE, "rus");
-    int x, work = 10;
+    setlocale(LC_ALL, "rus");
+    int x, work = 12;
     for (int i = 0;1;i)
     {
         if (oleg == -401238478) {
@@ -185,7 +254,7 @@ int main()
         else {
             system("cls");
             cout << "Лабораторная работа №1" << endl << endl;
-            cout << "Задание №" <<x<< endl<<endl;
+            cout << "Задание №" << x << endl << endl;
             switch (x) {
             case 1:
                 number1();
@@ -216,6 +285,12 @@ int main()
                 break;
             case 10:
                 number10();
+                break;
+            case 11:
+                number11();
+                break;
+            case 12:
+                number12();
                 break;
             }
         }
